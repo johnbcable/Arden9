@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Foundation Compass Template
 
 The easiest way to get started with Foundation + Compass.
@@ -27,3 +28,7 @@ If you'd like to upgrade to a newer version of Foundation down the road just run
 ```bash
 bower update
 ```
+=======
+# Arden9
+Code for the Arden 9 web site
+>>>>>>> 60ddfa1e1e803407cd5dbc917d3414faaa634d2b
