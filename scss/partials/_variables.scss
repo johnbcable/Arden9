@@ -17,7 +17,11 @@ $black: #000;
 $white: #fff;
 $grey: lighten($black, 50%);
 $dark-grey: lighten($black, 30%);
+<<<<<<< HEAD
 $medium-grey: darken($white, 50%);
+=======
+$d sc-grey: darken($white, 50%);
+>>>>>>> 30ba346c8d261dea1a0b1bf1eff3a3d0c50103e1
 $light-grey: darken($white, 10%);
  */
 $color1: #FF0000; // Red
@@ -34,7 +38,11 @@ $color11: #FFF; // White
 $color-brand: pink; // Yep, pink!
 $blockquote-bg: #faebbe; // Yellowy
 $color-link: #3D518F; // blue-dark
+<<<<<<< HEAD
 $sponsors-row-bg-color:  #CCF5FF;
+=======
+$sponsors-row-bg-color:  $medium-grey;
+>>>>>>> 30ba346c8d261dea1a0b1bf1eff3a3d0c50103e1
 $links-row-bg-color:  #33353B;
 $bottomrow-bg-color:  #26272B;
 

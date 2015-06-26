@@ -2,7 +2,11 @@
 @import "partials/base";
 
 // Import Compass support
+<<<<<<< HEAD
 @import "compass/css3";
+=======
+@import "compass";
+>>>>>>> 30ba346c8d261dea1a0b1bf1eff3a3d0c50103e1
 
 //  Compass Sprite Helper (for social networking icons)
 @import "social/*.png";

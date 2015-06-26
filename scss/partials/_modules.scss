@@ -140,3 +140,24 @@
 		}
 	}
 }
+<<<<<<< HEAD
+=======
+
+/********************************************
+ *    Area for media query styles 
+ ********************************************/
+
+@media screen and (max-width: 500px) {
+
+	// We need to make sure we have right and left margins
+	// and that the content is centered where appropriate
+	// e.g. buttons
+	// 
+	.footer {
+		width: 95%;
+		margin: 1em auto;
+	}
+	
+}    // end of media query for smartphones
+
+>>>>>>> 30ba346c8d261dea1a0b1bf1eff3a3d0c50103e1
