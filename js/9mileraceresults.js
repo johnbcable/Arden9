@@ -4,8 +4,12 @@
 var jsonstring = new String("");
 var baseurl = new String("http://www.hamptontennis.org.uk/Arden9/fetchJSON.asp");
 
-var curyear;   	// get the current value from the year
+var categories = new Array();	//	list of year, caetgory objects
+var filteredCategories = new Array();  // list use for filling in drop down list
+var curyear;   	// get the current value from the year (text)
 var curcategory;   // current value for category
+var intYear = 0;
+var categorydata;
 
 // Now create the URL's for the race details, the winners and then the runners
 var raceurl;		// holds string for URL for race details query
@@ -18,6 +22,7 @@ var runnersurl;	// holds string for URL for race runners query
 function paramSetup() {
 
 	curyear = $('#year').val();   // get the current value from the year
+
 	curcategory = $('#category').val();   // current value for category
 
 	// Now craete the URL's for the race details, the winners and then the runners
@@ -46,6 +51,39 @@ function paramSetup() {
 	alert('At end of paramSetup, runnersurl is now ['+runnersurl+']');
 */
 }
+
+//
+// getCategoryList 
+// 
+function getCategoryList(url) {
+
+/*
+	alert("Inside getWinners using URL "+url);
+*/
+
+	var categoryURL = new String("http://www.hamptontennis.org.uk/Arden9/fetchJSON.asp?id=13");
+
+	$.getJSON(categoryURL,function(data){
+
+		var jsonstring = JSON.stringify(data);
+
+		// jsonstring = new String("{allCategories:"+jsonstring+"}");
+
+		// var eventdata = $.parseJSON(jsonstring);
+		categories = eval("(" + jsonstring + ")");
+
+		// $.each(categorydata, function () {
+		// 	categories.push(this);
+		// });
+
+		// Set the boolean if we have data
+		// if (eventdata.length > 1)
+		//	eventsfound = true;
+
+	});  // end of function(data)
+
+}
+
 
 // Function to get the winners details for the currently chosen year
 // 
@@ -120,11 +158,53 @@ function getRunners(url) {
 
 $(document).ready(function() {
 	
+	var jsonstring;
+
+	getCategoryList();	// Pull in all the categories agains the year they were used
+	
+	// Restrict filtered categories to those used in intYear
+	intYear = 2016;
+	filteredCategories = categories.filter((obj) => obj.RaceYear === intYear);
+	
+	jsonstring = JSON.stringify(filteredCategories);
+
+	jsonstring = new String("{categorylist:"+jsonstring+"}");
+
+	// var eventdata = $.parseJSON(jsonstring);
+	categorydata = eval("(" + jsonstring + ")");
+
 	paramSetup();		// Setup parameters on first entry so can display default results
 
 	getWinners(winnersurl);  // Get winners on initial load
 
 	getRunners(runnersurl);  // get runners list on  initial load
+
+	// Refresh categories list if user changes year
+	$('#year').change( function (event) {
+		curyear = $('#year').val();
+//		alert('Year changed to '+ curyear);   // get the current value from the year
+		intYear = new Number(curyear).valueOf();
+//		alert('Type of intYear is ' + typeof intYear);   // get the current value from the year
+		// Update filtered categories so they only contain categories used in #year
+		filteredCategories = categories.filter((obj) => obj.RaceYear === intYear);
+
+		jsonstring = JSON.stringify(filteredCategories);
+
+		jsonstring = new String("{categorylist:"+jsonstring+"}");
+
+		// var eventdata = $.parseJSON(jsonstring);
+		categorydata = eval("(" + jsonstring + ")");
+
+		//Get the HTML from the category list template
+	    var theTemplateScript = $("#categorylist-template").html(); 
+
+	   //Compile the template
+	    var theTemplate = Handlebars.compile (theTemplateScript); 
+		// Handlebars.registerPartial("description", $("#shoe-description").html()); 
+		$("#categorylist").empty();   
+		$("#categorylist").append(theTemplate(categorydata)); 
+
+	} );
 
 	// Refresh all results if the Fetch button is pressed
 	$('#mysubmit').click( function (event) {
