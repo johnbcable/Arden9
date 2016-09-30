@@ -97,14 +97,15 @@
             </select>
           </div>
 
-          <div class="large-4 medium-4 small-6 columns">
+          <div id="categorylist" class="large-4 medium-4 small-6 columns">
+
 
             <label for="category">Age Category:&nbsp;</label>
             <select id="category" name="category">
               <option value="All">All ages</option>
               <option value="Females">Female: all ages</option>
               <option value="Males">Male: all ages</option>
-             <option value="M16-34">Male: 16-34</option>
+              <option value="M16-34">Male: 16-34</option>
               <option value="M35-44">Male: 35-44</option>
               <option value="M45-54">Male: 45-54</option>
               <option value="M55+">Male: 55 and over</option>
@@ -427,6 +428,19 @@
           </table>    
           </script>
         
+
+          <script id="categorylist-template" type="x-handlebars-template">
+            <label for="category">Age Category:&nbsp;</label>
+            <select id="category" name="category">
+              <option value="All">All ages</option>
+              <option value="Females">Female: all ages</option>
+              <option value="Males">Male: all ages</option>
+              {{#each categorylist}}
+              <option value={{category}}>{{category}}</option>
+              {{/each}}
+            </select>
+          </script>
+
 
   <!--  end of Handlebars template definitions    -->
 
