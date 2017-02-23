@@ -3,7 +3,7 @@ $(document).ready(function() {
 /*	The following code works with the original in htest.html
 
 	var jsonstring = new String("");
-	var url = "http://hamptontennis.org.uk/juniors/fetchJSON.asp?id=2";
+	var url = "https://hamptontennis.org.uk/juniors/fetchJSON.asp?id=2";
 	// var eventsfound = false;
 	$.getJSON(url,function(data){
 
@@ -31,7 +31,7 @@ $(document).ready(function() {
 */
 
 	var jsonstring = new String("");
-	var url = "http://www.hamptontennis.org.uk/Arden9/fetchJSON.asp?id=3&p1=2013";
+	var url = "https://www.hamptontennis.org.uk/Arden9/fetchJSON.asp?id=3&p1=2013";
 	// var eventsfound = false;
 	$.getJSON(url,function(data){
 
