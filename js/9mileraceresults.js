@@ -163,7 +163,7 @@ $(document).ready(function() {
 	getCategoryList();	// Pull in all the categories agains the year they were used
 	
 	// Restrict filtered categories to those used in intYear
-	intYear = 2018;
+	intYear = 2019;
 	filteredCategories = categories.filter((obj) => obj.RaceYear === intYear);
 	
 	jsonstring = JSON.stringify(filteredCategories);
