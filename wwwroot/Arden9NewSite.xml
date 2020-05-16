@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileZilla3 version="3.45.1" platform="mac">
+	<Servers>
+		<Server>
+			<Host>ftp.WebSiteLive.net</Host>
+			<Port>21</Port>
+			<Protocol>0</Protocol>
+			<Type>0</Type>
+			<User>a03pl_ftparden9</User>
+			<Pass encoding="base64">SGFtcHRvbjIwMjYh</Pass>
+			<Logontype>1</Logontype>
+			<TimezoneOffset>0</TimezoneOffset>
+			<PasvMode>MODE_DEFAULT</PasvMode>
+			<MaximumMultipleConnections>0</MaximumMultipleConnections>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<Name>New Arden 9 Site</Name>
+			<Comments />
+			<Colour>0</Colour>
+			<LocalDir>/Users/a03pl/Sites/Arden9New</LocalDir>
+			<RemoteDir>1 0</RemoteDir>
+			<SyncBrowsing>1</SyncBrowsing>
+			<DirectoryComparison>0</DirectoryComparison>
+		</Server>
+	</Servers>
+</FileZilla3>
