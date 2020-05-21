@@ -2,7 +2,7 @@
 //  Variables
 //
 var jsonstring = new String("");
-var baseurl = new String("https://www.hamptontennis.org.uk/Arden9/fetchJSON.asp");
+var baseurl = new String("https://arden9.net/fetchJSON.asp");
 
 var cursurname;   // current value for category
 

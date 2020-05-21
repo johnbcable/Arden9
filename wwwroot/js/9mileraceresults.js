@@ -2,7 +2,7 @@
 //  Variables
 //
 var jsonstring = new String("");
-var baseurl = new String("https://www.hamptontennis.org.uk/Arden9/fetchJSON.asp");
+var baseurl = new String("https://arden9.net/fetchJSON.asp");
 
 var categories = new Array();	//	list of year, caetgory objects
 var filteredCategories = new Array();  // list use for filling in drop down list
@@ -61,7 +61,7 @@ function getCategoryList(url) {
 	alert("Inside getWinners using URL "+url);
 */
 
-	var categoryURL = new String("https://www.hamptontennis.org.uk/Arden9/fetchJSON.asp?id=13");
+	var categoryURL = new String("https://arden9.net/fetchJSON.asp?id=13");
 
 	$.getJSON(categoryURL,function(data){
 
