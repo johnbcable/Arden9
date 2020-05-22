@@ -2,7 +2,7 @@
 //  Variables
 //
 var jsonstring = new String("");
-var baseurl = new String("https://arden9.net/fetchJSON.asp");
+var baseurl = new String("https://www.arden9.net/fetchJSON.asp");
 
 var categories = new Array();	//	list of year, caetgory objects
 var filteredCategories = new Array();  // list use for filling in drop down list
