@@ -2,6 +2,10 @@
 <!--#include file="JSON_2.0.4.asp" -->
 <!--#include file="JSON_UTIL_0.1.1.asp" -->
 <%
+Response.AddHeader "Access-Control-Allow-Origin", "*"
+Response.AddHeader "Cache-Control", "no-cache,no-store,must-revalidate"
+Response.AddHeader "Pragma", "no-cache"
+Response.AddHeader "Expires", 0
 ' This page sends back JSON data to a requesting agent 
 ' From and identified DB query
 'Dimension variables
