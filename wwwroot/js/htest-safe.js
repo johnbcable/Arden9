@@ -31,7 +31,7 @@ $(document).ready(function() {
 */
 
 	var jsonstring = new String("");
-	var url = "https://www.hamptontennis.org.uk/Arden9/fetchJSON.asp?id=3&p1=2013";
+	var url = "https://www.arden9.net/fetchJSON.asp?id=3&p1=2013";
 	// var eventsfound = false;
 	$.getJSON(url,function(data){
 

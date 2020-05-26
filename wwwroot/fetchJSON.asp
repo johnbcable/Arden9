@@ -117,6 +117,7 @@ If queryref > -1 Then
 	querylist(11) = "SELECT * FROM arden9runners WHERE [Hampton] = 'Y' AND [RaceYear] = {{p1}} AND [Category] LIKE '{{p2}}' ORDER BY Pos ASC"
 	querylist(12) = "SELECT DISTINCT(category) FROM arden9runners WHERE [RaceYear] = {{p1}} "
 	querylist(13) = "SELECT [RaceYear],[category] FROM arden9runners WHERE [RaceYear] IS NOT NULL AND [category] IS NOT NULL GROUP BY [RaceYear],[category] ORDER BY [RaceYear] DESC"
+	querylist(14) = "SELECT * FROM arden9winners"
 
 	strSQL = querylist(queryref)
 	origSQL = strSQL

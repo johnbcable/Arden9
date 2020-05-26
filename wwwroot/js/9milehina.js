@@ -2,7 +2,7 @@
 //  Variables
 //
 var jsonstring = new String("");
-var baseurl = new String("https://www.hamptontennis.org.uk/Arden9/fetchJSON.asp");
+var baseurl = new String("https://www.arden9.net/fetchJSON.asp");
 
 var curyear;   	// get the current value from the year
 var curcategory;   // current value for category

@@ -20,6 +20,7 @@ var runnersurl;	// holds string for URL for race runners query
 // Define utility functions first
 //
 function paramSetup() {
+	console.log('Running paramSetup');
 
 	curyear = $('#year').val();   // get the current value from the year
 
@@ -60,8 +61,10 @@ function getCategoryList(url) {
 /*
 	alert("Inside getWinners using URL "+url);
 */
+	console.log('Running getCategoryList with passed in url: '+url);
 
 	var categoryURL = new String("https://www.arden9.net/fetchJSON.asp?id=13");
+
 
 	$.getJSON(categoryURL,function(data){
 
@@ -89,6 +92,7 @@ function getCategoryList(url) {
 // 
 function getWinners(url) {
 
+	console.log('Running getWinners with passed in url: '+url);
 /*
 	alert("Inside getWinners using URL "+url);
 */
@@ -124,6 +128,7 @@ function getWinners(url) {
 
 function getRunners(url) {
 
+	console.log('Running getRunners with passed in url: '+url);
 /*
 	alert("Inside getWinners using URL "+url);
 */
