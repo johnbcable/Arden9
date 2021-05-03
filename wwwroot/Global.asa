@@ -2,9 +2,12 @@
 
 function Session_OnStart() {
   Session.Timeout = 300;
-  
-  Application("hamptonsportsdb") = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=D:\HostingSpaces\a03pl\arden9.org.uk\sports.mdb"
- }
+
+  Application("arden9db") = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=D:\HostingSpaces\\a03pl\\arden9.net\\data\\sports.mdb"
+
+    Application("hamptonsportsdb") = "Provider=SQLOLEDB; Data source=mssql5.websitelive.net;Initial catalog=a03pl_arden9;User Id=a03pl_dbadmin;Password=Banzai29!;"
+
+}
 
 function Session_OnEnd() {
 }

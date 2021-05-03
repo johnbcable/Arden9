@@ -2,6 +2,10 @@
 <!--#include file="JSON_2.0.4.asp" -->
 <!--#include file="JSON_UTIL_0.1.1.asp" -->
 <%
+Response.AddHeader "Access-Control-Allow-Origin", "*"
+Response.AddHeader "Cache-Control", "no-cache,no-store,must-revalidate"
+Response.AddHeader "Pragma", "no-cache"
+Response.AddHeader "Expires", 0
 ' This page sends back JSON data to a requesting agent 
 ' From and identified DB query
 'Dimension variables
@@ -113,6 +117,7 @@ If queryref > -1 Then
 	querylist(11) = "SELECT * FROM arden9runners WHERE [Hampton] = 'Y' AND [RaceYear] = {{p1}} AND [Category] LIKE '{{p2}}' ORDER BY Pos ASC"
 	querylist(12) = "SELECT DISTINCT(category) FROM arden9runners WHERE [RaceYear] = {{p1}} "
 	querylist(13) = "SELECT [RaceYear],[category] FROM arden9runners WHERE [RaceYear] IS NOT NULL AND [category] IS NOT NULL GROUP BY [RaceYear],[category] ORDER BY [RaceYear] DESC"
+	querylist(14) = "SELECT * FROM arden9winners"
 
 	strSQL = querylist(queryref)
 	origSQL = strSQL
