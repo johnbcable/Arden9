@@ -1,0 +1,158 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K &amp; D Arden 9-Mile Road Race - Results for a Team</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="icon" type="image/gif" href="animated_favicon1.gif">    
+    <link rel="stylesheet" href="bower_components/foundation/css/normalize.css" />
+    <!--   <link rel="stylesheet" href="css/base.css" />   -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+
+<!--
+<nav class="top-bar" data-options"is_hover: false">
+-->
+<!--
+<div class="contain-to-grid">
+-->
+  <nav class="top-bar contain-to-grid" role="navigation" data-topbar>
+    <ul class="title-area">
+      <!-- Title Area -->
+      <li class="name">
+        <!-- 
+        <a href="index.html"><img src="./img/SmallArden9Logo.jpg" /></a><br />
+        -->
+        <h1><a href="testajax.html">Testing AJAX Calls</a></h1>
+      </li>
+      <!-- 
+        Remove the class "menu-icon" to get rid of menu icon. 
+        Take out "Menu" to just have icon alone 
+      -->
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Right Nav Section -->
+      <ul class="right">
+        <li><a href="testajax.html">Home</a></li>
+      </ul>
+    </section>
+
+  </nav>
+
+  <!--   Main content area       -->
+
+  <!-- Header 
+  <header class="myhead hide-for-small">
+    <div class ="row">
+      <div class="mainbanner large-12 medium-12 columns">
+          <img src="./img/HomePageBanner.jpg" />
+          <h2>Welcome to the K &amp; D Arden 9-Mile Road Race!</h2>
+      </div>
+    </div>
+  </header>
+-->
+
+  <div class="row content">
+
+    <div class="large-1 medium-1 hide-for-small columns">
+      &nbsp;
+    </div>
+
+    <div id="resultsform" class="large-10 medium-10 small-12 columns">
+
+      <h2>Checking a UPRN</h2>
+
+      <form id="ArdenResultsForm">
+
+        <h3>Which UPRN do you need to check?</h3>
+
+        <div class="row">
+
+          <div class="large-4 medium-4 small-6 columns">
+
+            <label for="uprntocheck">UPRN:&nbsp;</label>
+            <input type="text" id="uprntocheck" name="uprntocheck" placeholder="Type the UPRN you wish to check - digits only please" />
+          </div>    <!--    /large-4    -->
+
+          <div class="large-4 medium-4 small-12 columns">
+
+            <p>
+              <button id="mysubmit" name="mysubmit" class="small button fetchresults">Check</button>
+            </p>
+
+          </div>
+
+          <div class="large-4 medium-4 small-12 columns">
+
+            &nbsp;
+
+          </div>
+        </div>    <!--    /row    -->
+
+      </form>
+      <hr />
+
+    </div>    <!--    /resultsform    -->
+
+    <div class="large-1 medium-1 hide-for-small columns">
+      &nbsp;
+    </div>
+
+  </div>   <!--   /content      -->
+
+  <div class="row content">
+    <!--   Secondly, the full runners results table for the currently fetched race/category  -->
+   
+    <div class="row">
+    
+      <div class="large-1 medium-1 hide-for-small columns">
+        &nbsp;
+      </div>
+
+      <div class="large-10 medium-10 small-12 columns">
+
+        <p>
+          The full list of team result entries for the above is shown below. Each entry includes the course time (in minutes:seconds), and the age category applicable at the time of the race (shown to the right of the runner&apos;s name). 
+        </p>
+        <p>
+          The list is presented in descending date (most recent race first) order.
+        </p>
+
+        <div id="ajaxtestresults"></div>   <!-- runnerstable -->
+
+        <p>
+          Thanks to everyone who took part in this race. Well done - see you again next time!
+        </p>
+
+      </div>    <!--    /large-10    -->
+
+      <div class="large-1 medium-1 hide-for-small columns">
+        &nbsp;
+      </div>
+
+    </div>    <!--    /row    -->
+<!-- 
+    <div class="row">
+
+      <div class="large-12 medium-12 small-12 columns">
+
+        <div id="runnersjson"></div>
+
+      </div>    
+
+    </div>    
+
+ -->
+
+  </div>    <!--    /content    -->
+  
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/testajax.js"></script>
+  </body>
+</html>

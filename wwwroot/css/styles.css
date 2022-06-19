@@ -7855,8 +7855,10 @@ header .mainbanner h2 {
 }
 /* line 18, ../scss/partials/_modules.scss */
 .footer .sponsorsrow {
+  /* Light grey   */
+  background-color:#C0C0C0;
   /* Light blue   */
-  background-color: #CCF5FF;  
+  /* background-color: #CCF5FF;  */
   /* Light green  
   background-color: #C0F2C0; 
   */
